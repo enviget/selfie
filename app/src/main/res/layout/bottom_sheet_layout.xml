@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:padding="16dp"
+    app:layout_behavior="com.google.android.material.Bottomsheet"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_bottomsheet_camera"
+        android:text= "Take a new photo"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:textSize="25dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_bottomsheet_gallery"
+        android:text= "Pick from your gallery"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:gravity="center"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "893309408455",
+    "firebase_url": "https://apolis-b29-default-rtdb.firebaseio.com",
+    "project_id": "apolis-b29",
+    "storage_bucket": "apolis-b29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893309408455:android:cf887283e99a14a37c9ae2",
+        "android_client_info": {
+          "package_name": "com.example.firebaseproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893309408455-dh5ptvhqrfmbvjnkpb3svhm9i6q8r0kv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAPh7iYgMnny0ChAGNFoelwx683zJI1go"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893309408455-dh5ptvhqrfmbvjnkpb3svhm9i6q8r0kv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893309408455:android:b3c095c964c7d0bb7c9ae2",
+        "android_client_info": {
+          "package_name": "com.example.selifeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893309408455-dh5ptvhqrfmbvjnkpb3svhm9i6q8r0kv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAPh7iYgMnny0ChAGNFoelwx683zJI1go"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893309408455-dh5ptvhqrfmbvjnkpb3svhm9i6q8r0kv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
