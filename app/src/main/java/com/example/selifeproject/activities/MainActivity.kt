@@ -127,9 +127,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openGalleryandChoose() {
-//        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-//        startActivityForResult(Intent.createChooser(intent,"Please select a picture" ),REQUEST_GALLERY_CODE)
-
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.setType("image/*")
         startActivityForResult(intent, REQUEST_GALLERY_CODE)
@@ -151,7 +148,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             Uri.fromFile(capturedImage)
         }
-        selectedUri = mUri
 
         intent.putExtra(MediaStore.EXTRA_OUTPUT, mUri)
             .addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
@@ -167,8 +163,6 @@ class MainActivity : AppCompatActivity() {
             REQUEST_CAMERA_CODE -> {
                 if (resultCode == Activity.RESULT_OK && data != null) {
                     Log.d("abc", "${data.data.toString()}")
-                    selectedUri = data.data!!
-                    uploadPicture()
                 }
             }
             REQUEST_GALLERY_CODE -> {
@@ -184,6 +178,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun displayList() {
+        mPhotoList.clear()
         var imageRef =
             FirebaseStorage.getInstance().getReferenceFromUrl("gs://apolis-b29.appspot.com")
         var pathReference = imageRef.child("$userId/image")
