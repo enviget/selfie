@@ -2,19 +2,22 @@ package com.example.selifeproject.adapters
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.net.Uri
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.selifeproject.R
 import kotlinx.android.synthetic.main.adapter_photos_rows.view.*
 
 class AdapterPhotos(var mContext: Context) : RecyclerView.Adapter<AdapterPhotos.MyViewHolder>(){
 
-    var mPhotos = ArrayList<Bitmap>()
+    var mPhotos = ArrayList<Uri>()
     inner class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-        fun bind(){
-            itemView.image_view_adapter_photo.setImageBitmap(mPhotos[adapterPosition])
+        fun bind(uri:Uri){
+            Glide.with(mContext.applicationContext).load(uri).into(itemView.image_view_adapter_photo)
 
         }
     }
@@ -29,10 +32,10 @@ class AdapterPhotos(var mContext: Context) : RecyclerView.Adapter<AdapterPhotos.
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind()
+        holder.bind(mPhotos[position])
     }
 
-    fun setData(photos : ArrayList<Bitmap>){
+    fun setData(photos : ArrayList<Uri>){
         mPhotos = photos
         notifyDataSetChanged()
     }

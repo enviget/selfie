@@ -11,6 +11,7 @@ import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_login.*
 import java.lang.Exception
 
@@ -22,6 +23,10 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_login)
 
         auth = FirebaseAuth.getInstance()
+        var isLoggedIn = FirebaseAuth.getInstance().currentUser
+        if(isLoggedIn != null){
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()}
         init()
     }
 

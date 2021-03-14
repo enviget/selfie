@@ -21,6 +21,12 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:id="@+id/image_view"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_logout"
+            android:layout_gravity="right"
+            android:text="logout"/>
 
 
     </LinearLayout>
